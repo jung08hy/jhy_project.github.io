@@ -17,7 +17,6 @@ table{border-collapse:collapse;table-layout:fixed;}
 fieldset{border:none}
 .skip, hr, legend{position:absolute;left:-1000%;width:1px;height:1px;font-size:0;line-height:0;overflow:hidden;}
 button{margin:0;padding:0;border:none;background:none;outline:none;cursor:pointer;display:inline-block;}
-body { font-family: 'NotoKr-Regular';background:#222;}
 /*common*/
 .clear_b:after{
 	content: "";
@@ -25,12 +24,14 @@ body { font-family: 'NotoKr-Regular';background:#222;}
     table-layout: fixed;
     clear: both;
 } 
-body, html {
+.wrap {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	 font-family: 'NotoKr-Regular';
+	background:#222;
 }
 .scroll-container {
 	width: 100%;
@@ -99,19 +100,23 @@ body, html {
 	right: 10px;
 }
 section{padding:30px;box-sizing: border-box;position: relative}
-h1,h2,h3{color:#fff}
-h1{
+#main h1,#main h2,#main h3{color:#fff}
+#main h1{
 	font-family:'NEXONFootballGothicBA1'; 
 	font-size:50px
 }
-h1:after{
+#main h1:after{
 	content: '';
 	width:320px;
 	height:5px;
 	background: #fff;
 	display:block
 }
-
+#main h1 a {
+    font-size: 15px;
+    color: #98C19F;
+    font-family: 'NotoKr-Regular';
+}
 .section1 {
 	background-color: #222;
 }
@@ -191,7 +196,45 @@ p.copyright {
     font-size: 14px;
 }
 
-
+/*sub*/
+.sub_header,.sub_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 0;
+}
+.hideme
+{
+	margin:10px;
+    opacity:0;
+}
+.sub_header h1{font-size: 30px;font-weight: bold}
+.sub_header ul {margin-top:30px}
+.sub_header ul li{float:left;width:33.3%}
+.sub_header ul li span{color:#999}
+.sub_header ul li strong{display: block;}
+.sub_content img{width:100%}
+.sub_content > div{margin-bottom:130px}
+.sub_content {
+    border-top: 3px solid #000;
+    margin-top: 20px;
+}
+p.btn {
+    text-align: center;
+    position: relative;
+    top: -100px;
+}
+	
+p.btn a {
+    display: inline-block;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px 30px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+	transition: .3s
+}
+p.btn a:hover{background:#000;color: #fff;transition: .3s}
 @media (max-width:1024px){
 	.w-gallery {margin-top:20%}
 	.count_area {bottom:20%}
